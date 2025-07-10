@@ -131,8 +131,10 @@
   </div>
 
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span id="prevArrow" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2.5rem; color: white; cursor: pointer; user-select: none;">&#10094;</span>
     <img id="lightbox-img" src="" alt="Enlarged Review">
-  </div>
+    <span id="nextArrow" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2.5rem; color: white; cursor: pointer; user-select: none;">&#10095;</span>
+</div>
 
 
   <script>
@@ -178,6 +180,19 @@
       }
       document.getElementById('lightbox-img').src = images[currentImageIndex];
     });
+
+    document.getElementById('prevArrow').addEventListener('click', function(e) {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      document.getElementById('lightbox-img').src = images[currentImageIndex];
+    });
+
+    document.getElementById('nextArrow').addEventListener('click', function(e) {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      document.getElementById('lightbox-img').src = images[currentImageIndex];
+    });
+
   </script>
 </body>
 </html>
