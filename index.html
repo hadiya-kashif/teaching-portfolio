@@ -61,8 +61,8 @@
     @media (max-width: 768px) {
     #prevArrow, #nextArrow {
     font-size: 2rem;
-    left: 8% !important;
-    right: 8% !important;
+    top: 50%;
+    transform: translateY(-50%);
     }
     }
 
@@ -71,6 +71,10 @@
     font-size: 1.8rem;
     left: 10% !important;
     right: 10% !important;
+  }
+   .lightbox img {
+    max-width: 90vw;
+    max-height: 60vh;
   }
 }
   </style>
@@ -102,8 +106,8 @@
   <h2>🏫 Teaching Experience</h2>
   <ul>
     <li><strong>FAST-NUCES, Lahore – Visiting Lab Instructor</strong> (Fall 2024–Present)<br>
-    Courses: Assembly Language, Data Structures (Fall 2024 – 3 sections × 50 students)<br>
-    Courses: Artificial Intelligence, Data Mining, Database Systems (Spring 2025 – 4 sections × 50 students)</li>
+    <strong><em>Courses:</em></strong> Assembly Language, Data Structures (Fall 2024 – 3 sections × 50 students)<br>
+    <strong><em>Courses:</em></strong> Artificial Intelligence, Data Mining, Database Systems (Spring 2025 – 4 sections × 50 students)</li>
     <li><strong>FAST-NUCES, Lahore – Teaching Assistant</strong><br>
     Digital Image Processing (Spring 2023, 93 students)<br>
     Assembly Language (Fall 2021, 99 students)</li>
@@ -147,9 +151,9 @@
   </div>
 
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span id="prevArrow" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2.5rem; color: white; cursor: pointer; user-select: none;">&#10094;</span>
+    <span id="prevArrow" style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); font-size: 2.5rem; color: black; cursor: pointer; user-select: none;">&#10094;</span>
     <img id="lightbox-img" src="" alt="Enlarged Review">
-    <span id="nextArrow" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2.5rem; color: white; cursor: pointer; user-select: none;">&#10095;</span>
+    <span id="nextArrow" style="position: absolute; top: 50%; right: 5%; transform: translateY(-50%); font-size: 2.5rem; color: black; cursor: pointer; user-select: none;">&#10095;</span>
 </div>
 
 
