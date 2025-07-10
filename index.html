@@ -57,6 +57,22 @@
         width: 100%;
       }
     }
+
+    @media (max-width: 768px) {
+    #prevArrow, #nextArrow {
+    font-size: 2rem;
+    left: 8% !important;
+    right: 8% !important;
+    }
+    }
+
+@media (max-width: 480px) {
+  #prevArrow, #nextArrow {
+    font-size: 1.8rem;
+    left: 10% !important;
+    right: 10% !important;
+  }
+}
   </style>
 </head>
 <body>
@@ -138,6 +154,7 @@
 
 
   <script>
+    window.onload = function () {
     const images = [
       'screenshots/review1.jpg',
       'screenshots/review2.jpg',
@@ -192,6 +209,9 @@
       currentImageIndex = (currentImageIndex + 1) % images.length;
       document.getElementById('lightbox-img').src = images[currentImageIndex];
     });
+
+       window.openLightbox = openLightbox;
+    };
 
   </script>
 </body>
